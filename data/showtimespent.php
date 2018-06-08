@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Show Time spent User</title>
-	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-	<script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-	<script type="text/javascript" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-
-</head>
-<body>
- <h1><center>Show Time Spent User</center></h1>
+<?php include 'template/header.php' ?>
  <div class="col-md-12">
+
+ <h1 class="title"><center>Show Time Spent User</center></h1>
  	<div class="container">
  	<?php
-	include_once("../classes/Crud.php");
+	include '../classes/Crud.php';
 	$crud = new Crud();
 	//fetching data in descending order (lastest entry first)
 	$query = "SELECT * FROM time_spent";
@@ -52,11 +40,5 @@
 	</table>		
  	</div>
  </div>
+<?php include 'template/footer.php' ?>
  
- <script type="text/javascript">
- $(document).ready( function () {
-    $('#myTable').DataTable();
- });
- </script>
-</body>
-</html>

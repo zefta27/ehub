@@ -14,7 +14,7 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="Shortcut Icon" href="assets/img/favicon.ico" type="image/ico" />
   <!-- Custom fonts for this template -->
-  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
   <link rel="stylesheet" href="assets/vendor/simple-line-icons/css/simple-line-icons.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -52,7 +52,7 @@
       margin-top: 15px;
     }
   </style>
-
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/dbf4b7f2f13db01e324518266/db3a696b8f5e21b75534cbdee.js");</script>
 </head>
 
 <body id="page-top">
@@ -209,7 +209,7 @@
         </div>
         <div class="row" style="margin-top: 40px;">
           <div class="col-lg-2">
-            <i class="fa fa-heart" style="font-size: 21pt;border-radius: 100%;background-color: white;padding: 30px;color: #ffdf00;margin-bottom: 5px; "></i>
+            <i class="fa fa-clock" style="font-size: 21pt;border-radius: 100%;background-color: white;padding: 30px;color: #ffdf00;margin-bottom: 5px; "></i>
             <h5 style="font-weight: 600;color: #fff300;">Hemat Waktu</h5>
           </div>
           <div class="col-lg-10">
@@ -251,14 +251,14 @@
                         <div class="tab-pane in active" id="tab2default">
                             <h3 style="font-weight: 600"><b>Cara Kerja</b></h3>
                     <div class="item">
-                      <span class="fa fa-check" style="color: #fff"></span>
+                      <span class="fa fa-clipboard-list " style="color: #fff"></span>
                       <div>Deskripsikan Kebutuhan</div>
                       <p>
                         Isi data proyek sesuai kebutuhan anda   
                       </p>
                     </div>
                     <div class="item">
-                      <span class="fa fa-wpforms" style="color: #fff"></span>
+                      <span class="fa fa-handshake" style="color: #fff"></span>
                       <div>Dapatkan penawaran</div>
                       <p>
                         Mitra kami akan memberikan penawaran atas kebutuhan anda
@@ -273,14 +273,14 @@
                       </p>
                     </div>
                     <div class="item">
-                      <span class="fa fa-money" style="color: #fff"></span>
+                      <span class="fa fa-moneybill" style="color: #fff"></span>
                       <div>Pilih Penawaran</div>
                       <p>
                         Pilih penawaran dari mitra kami yang sesuai
                       </p>
                     </div>
                     <div class="item">
-                      <span class="fa fa-mortar-board" style="color: #fff"></span>
+                      <span class="fa fa-check-circle" style="color: #fff"></span>
                       <div>SPS dipasang</div>
                       <p>
                         Nikmati manfaat SPS anda
@@ -308,16 +308,13 @@
               <div class="container">
                 
                   <div class="row">
-                  <div class="col-lg-8 container text-center">
+                  <div class="col-lg-6 container text-center">
                     <center>
                     <p class="text-muted">
-                     <form class="form-inline" action="/action_page.php">
-                      <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="Email">
-                      </div>
-                      
-                      <button type="submit" class="btn btn-default">Kirim</button>
-                    </form>
+                    <h5 style="font-weight: 600;font-style: bold;color: white;">Dapatkan informasi terbaru mengenai perkembangan produk kami!</h5>
+                       <input type="text" class="form-control input-newsletter" name="newsletter" placeholder="Masukkan email anda"><br> 
+                       <button type="submit" class="btn btn-primary btn-lg" id="btn-newsletter"><i class="fa fa-envelope"></i>&nbspKirim</button>
+                    
                     </p> 
                     </center>
                     </div>
@@ -349,6 +346,53 @@
               </div>
             </footer>
 
+<div id="newsletterModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Kirim Newsletter</h4>
+      </div>
+      <div class="modal-body">
+    <center>
+      <div class="res-newsletter-email"></div>
+      <form  method="post" action="savenewsletter.php">
+        <input type="hidden" name="email" class="email-newsletter" value="">
+        <input type="submit" name="kirim" value="Kirim" class="btn btn-primary">
+      </form>
+      <?php
+// if (isset($_POST['kirim'])) {
+ 
+// include_once("classes/Crud.php");
+// $crud = new Crud();
+
+// $id_newsletter = rand(0000000,9999999);
+// $ipaddress  =$_SERVER['REMOTE_ADDR'];
+// $info = $_SERVER['HTTP_USER_AGENT'] ;
+// $email= $_POST['email-newsletter'];
+// $waktu = date("Y-m-d");
+// $jam  = date("h:i:s");
+
+
+// $result = $crud->execute("INSERT INTO email_newsletter(id_email, ip_address, info, email, waktu, jam) VALUES('$id_email','$ipaddress','$info','$email','$waktu','$jam')");
+
+// header("Location: http://localhost/energihub/"); 
+// }
+
+?>
+    </center>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      
             <!-- Bootstrap core JavaScript -->
             <script src="assets/vendor/jquery/jquery.min.js"></script>
 
@@ -364,6 +408,14 @@
          
 
     <script src="assets/js/screentime.js"></script>
+    <script type="text/javascript">
+      $("#btn-newsletter").click(function (){
+        $('#newsletterModal').modal('show')
+        var inpnewsletter = $( ".input-newsletter" ).val();
+        $( ".email-newsletter" ).val(inpnewsletter);
+        $( ".res-newsletter-email" ).append("<b>"+inpnewsletter+"<b>");
+      })
+    </script>
     <script type="text/javascript">
       function timespent()
       {
@@ -488,56 +540,7 @@ $.screentime({
     
 });
            </script>
-            <script>
-var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-        if (this.isDeleting) { delta /= 2; }
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
-      </script>
+            
       <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
    
     </body> 
