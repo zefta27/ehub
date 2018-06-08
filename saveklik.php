@@ -13,7 +13,7 @@ $data['ipaddress'] = $ipaddress;
 $data['info'] = $info; 
 $data['aksi'] = $aksi; 
 
-$result = $crud->execute("INSERT INTO klik_histori(id_histori,info,aksi,waktu) VALUES('$id_histori','$ipaddress','$info','$aksi','$waktu')");
+$result = $crud->execute("INSERT INTO klik_histori(id_histori, ip_address, info, aksi, waktu) VALUES('$id_histori','$ipaddress','$info','$aksi','$waktu')");
 
 echo json_encode($data);
 

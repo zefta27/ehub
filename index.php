@@ -52,85 +52,7 @@
       margin-top: 15px;
     }
   </style>
-<!-- <style type="text/css">
-  .tabbable-panel {
-  border:1px solid #eee;
-  padding: 10px;
-}
-/* Default mode */
-.tabbable-line > .nav-tabs {
-  border: none;
-  margin: 0px;
-}
-.tabbable-line > .nav-tabs > li {
-  margin-right: 2px;
-}
-.tabbable-line > .nav-tabs > li > a {
-  border: 0;
-  margin-right: 0;
-  color: #737373;
-}
-.tabbable-line > .nav-tabs > li > a > i {
-  color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-  border-bottom: 4px solid #fbcdcf;
-}
-.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
-  border: 0;
-  background: none !important;
-  color: #333333;
-}
-.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
-  color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
-  margin-top: 0px;
-}
-.tabbable-line > .nav-tabs > li.active {
-  border-bottom: 4px solid #f3565d;
-  position: relative;
-}
-.tabbable-line > .nav-tabs > li.active > a {
-  border: 0;
-  color: #333333;
-}
-.tabbable-line > .nav-tabs > li.active > a > i {
-  color: #404040;
-}
-.tabbable-line > .tab-content {
-  margin-top: -3px;
-  background-color: #fff;
-  border: 0;
-  border-top: 1px solid #eee;
-  padding: 15px 0;
-}
-.portlet .tabbable-line > .tab-content {
-  padding-bottom: 0;
-}
-/* Below tabs mode */
-.tabbable-line.tabs-below > .nav-tabs > li {
-  border-top: 4px solid transparent;
-}
-.tabbable-line.tabs-below > .nav-tabs > li > a {
-  margin-top: 0;
-}
-.tabbable-line.tabs-below > .nav-tabs > li:hover {
-  border-bottom: 0;
-  border-top: 4px solid #fbcdcf;
-}
-.tabbable-line.tabs-below > .nav-tabs > li.active {
-  margin-bottom: -2px;
-  border-bottom: 0;
-  border-top: 4px solid #f3565d;
-}
-.tabbable-line.tabs-below > .tab-content {
-  margin-top: -10px;
-  border-top: 0;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 15px;
-}
-</style> -->
+
 </head>
 
 <body id="page-top">
@@ -145,19 +67,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#harga">Home</a>
+            <a class="nav-link js-scroll-trigger" href="#Utama">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#fitur">Cara Kerja</a>
+            <a class="nav-link js-scroll-trigger" href="#Carakerja">Cara Kerja</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#desain">Kalkulator</a>
+            <a class="nav-link js-scroll-trigger" href="#kalkulator">Kalkulator</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#kontak">Tentang</a>
+            <a class="nav-link js-scroll-trigger" href="#tentang">Tentang</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#kontak">Blog</a>
+            <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
           </li>
         </ul>
       </div>
@@ -174,12 +96,15 @@
           </h1>
           <h2> <center>Kurangi taguhan listrik hingga 75% dengan menggunakan Panel Surya. <br>Daparkan penawaran dari 100+ developer dengan harga terjangkau </center></h2>
             <center><button class="btn btn-primary btn-lg" id="submit" style="margin-top: 40px;" >Daftar Sekarang</button></center>
+            <button class="btn btn-default btn-lg" id="btnTimeSpent">Time Spent</button>
             <div class="result"></div>
               <div id="console">
               <ul>
       <li data-time="0" data-field="Utama">Utama: <span>0</span>s</li>
-      <li data-time="0" data-field="Fitur">Fitur: <span>0</span>s</li>
+      <li data-time="0" data-field="Migrasi">Migrasi: <span>0</span>s</li>
       <li data-time="0" data-field="Why">Why: <span>0</span>s</li>
+      <li data-time="0" data-field="Carakerja">Cara Kerja : <span>0</span>s</li>
+      <li data-time="0" data-field="Kontak">Kontak : <span>0</span>s</li>
     </ul>
     </div>
             <div id="daftarModal" class="modal fade" role="dialog">
@@ -211,7 +136,7 @@
 
 
 
-    <section class="features" id="Fitur">
+    <section class="features" id="Migrasi">
       <div class="container">
         <div class="section-heading text-center">
           <h2>Beralih ke Energi Surya</h2>
@@ -296,7 +221,7 @@
       </div>
     </section>
 
-    <section  id="desain">
+    <section  id="Carakerja">
       <div class="cta-content">
         <div class="container">
            <div class="row">
@@ -379,7 +304,7 @@
         
         </section>
 
-            <section class="contact  text-center bg-primary" style="background-color: #222;" id="kontak">
+            <section class="contact  text-center bg-primary" style="background-color: #222;" id="Kontak">
               <div class="container">
                 
                   <div class="row">
@@ -439,14 +364,54 @@
          
 
     <script src="assets/js/screentime.js"></script>
+    <script type="text/javascript">
+      function timespent()
+      {
+         var utama = $('#console li[data-field="Utama"]').find('span').html();
+          var migrasi = $('#console li[data-field="Migrasi"]').find('span').html();
+          var why = $('#console li[data-field="Why"]').find('span').html();
+          var carakerja = $('#console li[data-field="Carakerja"]').find('span').html();
+          var kontak = $('#console li[data-field="Kontak"]').find('span').html();
+    
+
+     var ipaddress = "<?php echo $_SERVER['REMOTE_ADDR'] ?>";
+     var info = "<?php echo  $_SERVER['HTTP_USER_AGENT'] ?>";
+    // alert(ipaddress+"-"+info);
+    $('.result').text('');
+    var formData = {
+      'ipaddress'         : ipaddress,
+      'info'             : info,
+      'utama'              : utama,
+      'migrasi'              : migrasi,
+      'why'              : why,
+      'carakerja'              : carakerja,
+      'kontak'              : kontak,
+        };
+       $.ajax({
+            type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+            url         : 'http://localhost/energihub/timespent.php', // the url where we want to POST
+            // url         : 'proses_hitung_jarak.php', // the url where we want to POST
+            data        : formData, // our data object
+            dataType    : 'json', // what type of data do we expect back from the server
+            encode          : true
+        })
+            // using the done promise callback
+            .done(function(data) {
+
+                // log data to the console so we can see
+                console.log(data); 
+                $('.result').append("<b>Alamat Pengguna: "+data.info+" </b>");
+
+
+                // here we will handle errors and validation messages
+            });
+        event.preventDefault();
+      }
+    </script>
 <script type="text/javascript">
-  $(window).on('beforeunload', function(e) {
-    if(confirm("Are you sure you want to close this window")){
-          
-         return true;
-    }else{
-         return false;
-     }
+$(window).bind('beforeunload', function(){
+  timespent();
+  return 'Are you sure you want to leave?';
 });
 </script>
 <script>
@@ -455,11 +420,17 @@ $.screentime({
     { selector: '#Utama',
       name: 'Utama'
     },
-    { selector: '#Fitur',
-      name: 'Fitur'
+    { selector: '#Migrasi',
+      name: 'Migrasi'
     },
     { selector: '#Why',
       name: 'Why'
+    },
+    { selector: '#Carakerja',
+      name: 'Carakerja'
+    },
+    { selector: '#Kontak',
+      name: 'Kontak'
     }
   ],
   reportInterval: 1,
@@ -474,10 +445,15 @@ $.screentime({
   }
 });
 </script>
-</script>
     <!-- save action to database -->
            <script type="text/javascript">
-             
+       
+       $('#btnTimeSpent').click(function(){
+         
+        timespent();
+         // alert("Utama : "+utama+"s, Migrasi : "+migrasi+"s, Why : "+why+"s, Cara Kerja : "+carakerja+"s, Kontak : "+kontak+"s");    
+       
+       });      
   $('#submit').click(function(){
      var ipaddress = "<?php echo $_SERVER['REMOTE_ADDR'] ?>";
      var info = "<?php echo  $_SERVER['HTTP_USER_AGENT'] ?>";
@@ -491,7 +467,7 @@ $.screentime({
         };
        $.ajax({
             type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-            url         : 'saveklik.php', // the url where we want to POST
+            url         : 'http://localhost/energihub/saveklik.php', // the url where we want to POST
             // url         : 'proses_hitung_jarak.php', // the url where we want to POST
             data        : formData, // our data object
             dataType    : 'json', // what type of data do we expect back from the server
