@@ -94,8 +94,11 @@
           <h1 class="mb-5">
             <center>Save Earth. Save Money</center>
           </h1>
-          <h2> <center>Kurangi taguhan listrik hingga 75% dengan menggunakan Panel Surya. <br>Daparkan penawaran dari 100+ developer dengan harga terjangkau </center></h2>
+          <div  class="fade-utama">
+          <h2><center>Kurangi taguhan listrik hingga 75% dengan menggunakan Panel Surya. <br>Daparkan penawaran dari 100+ developer dengan harga terjangkau </center></h2>
+            </div>
             <center><button class="btn btn-primary btn-lg" id="submit" style="margin-top: 40px;" >Daftar Sekarang</button></center>
+            <!-- <div class="div-data"> -->
             <button class="btn btn-default btn-lg" id="btnTimeSpent">Time Spent</button>
             <div class="result"></div>
               <div id="console">
@@ -107,6 +110,7 @@
       <li data-time="0" data-field="Kontak">Kontak : <span>0</span>s</li>
     </ul>
     </div>
+    <!-- </div> -->
             <div id="daftarModal" class="modal fade" role="dialog">
               <div class="modal-dialog">
 
@@ -409,11 +413,19 @@
 
     <script src="assets/js/screentime.js"></script>
     <script type="text/javascript">
+     $(document).ready(function(){
+        $(".div-data").hide();
+        $(".fade-utama").fadeIn("slow");
+      });
+
       $("#btn-newsletter").click(function (){
+        
         $('#newsletterModal').modal('show')
         var inpnewsletter = $( ".input-newsletter" ).val();
         $( ".email-newsletter" ).val(inpnewsletter);
         $( ".res-newsletter-email" ).append("<b>"+inpnewsletter+"<b>");
+      var aksi = "Klik send Email";
+        sendAksi(aksi);  
       })
     </script>
     <script type="text/javascript">
@@ -507,9 +519,13 @@ $.screentime({
        
        });      
   $('#submit').click(function(){
+    var aksi = "Klik Daftar Sekarang";
+    sendAksi(aksi);   
+});
+
+  function sendAksi(aksi){
      var ipaddress = "<?php echo $_SERVER['REMOTE_ADDR'] ?>";
      var info = "<?php echo  $_SERVER['HTTP_USER_AGENT'] ?>";
-    var aksi = "Klik Daftar Sekarang";
     // alert(ipaddress+"-"+info);
     $('.result').text('');
     var formData = {
@@ -537,8 +553,7 @@ $.screentime({
             });
         event.preventDefault();
         // alert("test");
-    
-});
+  }
            </script>
             
       <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
